@@ -4,9 +4,28 @@ let palavra_chave = {
     "i": "imes",
     "o": "ober",
     "u": "ufat"
+};
+
+function criptografar(){
+    let mensagem = document.querySelector('.input_texto');
+    let mensagem_caracter = mensagem.value.split('');
+    mensagem.value = '';
+    return criptografando(mensagem_caracter); 
 }
 
-let mensagem_criptografada = '';
+function criptografando(mensagem_caracter){
+    let mensagem_criptografada = '';
+
+    for (let i = 0; i < mensagem_caracter.length; i++) {
+        let caracter = mensagem_caracter[i];
+        if (palavra_chave[caracter]) {
+            mensagem_criptografada += palavra_chave[caracter];
+        } else {
+            mensagem_criptografada += caracter;
+        }
+    }
+    console.log(mensagem_criptografada)
+}
 
 function inverte_palavra_chave(){
     let chaves = {};
@@ -16,25 +35,14 @@ function inverte_palavra_chave(){
     return chaves
 }
 
-function criptografar(){
-    let mensagem = document.querySelector('.input_texto');
-    let mensagem_caracter = mensagem.value.split('');
-
-    for (let i = 0; i < mensagem_caracter.length; i++) {
-        let caracter = mensagem_caracter[i];
-        if(palavra_chave[caracter]){
-            mensagem_criptografada += palavra_chave[caracter];
-        }else{
-            mensagem_criptografada += caracter;
-        }
-    }
-    console.log(mensagem_criptografada);
-}
-
-function descriptografar() {
+function descriptografar(){
     let mensagem = document.querySelector('.input_texto');
     let mensagem_descriptografada = mensagem.value;
+    mensagem.value = '';
+    return descriptografando(mensagem_descriptografada);
+}
 
+function descriptografando(mensagem_descriptografada) {
     let palavra_chave_invertida = inverte_palavra_chave();
 
     for (let substituicao in palavra_chave_invertida) {
