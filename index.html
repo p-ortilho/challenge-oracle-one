@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,35 @@
     <title>Challenge</title>
 </head>
 <body>
+    <script src="/javascript/script.js"></script>
     <main class="conteudo">
         <section class="primaria">
             <div class="imagem_primaria">
                 <img class="logo" src="./assets/science-atoms.svg" alt="Logo de Atomo">
             </div>
-            <input class="input_texto" type="text">
-            <p class="disclaimer">
-                <img class="disclaimer_imagem" src="./assets/triangle-exclamation-yellow.svg" alt="">
-                Apenas letras minúsculas e sem acento.</p>
-            <div class="container_botao">
-                <button class="botao_criptografar">Criptografar</button>
-                <button class="botao_descriptografar">Descriptografar</button>
+            <div class="container_primaria_conteudo">
+                <textarea class="input_texto" type="text" placeholder="Digite seu texto"></textarea>
+                <div class="container_disclaimer">
+                    <img class="disclaimer_imagem" src="./assets/triangle-exclamation-yellow.svg" alt="disclaimer">
+                    <p class="disclaimer">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="container_botao">
+                    <button class="botao_criptografar" onclick="criptografar()">Criptografar</button>
+                    <button class="botao_descriptografar" onclick="descriptografar()">Descriptografar</button>
+                </div>
             </div>
         </section>
         <section class="secundaria">
-            <img class="imagem_codigo" src="./assets/undraw_hacker_mind.svg" alt="">
-            <div class="container_secundaria_textos">
-                <h1 class="secundaria_titulo">Nenhuma mensagem encontrada</h1>
-                <p class="secundaria_texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <div class="container_secundaria_criptografia">
+                <textarea class="mensagem_criptografada" disabled placeholder="Nenhuma mensagem encontrada"></textarea>
+            </div>
+            <button class="botao_copiar" onclick="copiar()">Copiar</button>
+            <div class="container_secundaria">
+                <img class="imagem_codigo" src="./assets/undraw_hacker_mind.svg" alt="">
+                <div class="container_secundaria_textos">
+                    <h1 class="secundaria_titulo">Nenhuma mensagem encontrada</h1>
+                    <p class="secundaria_texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
             </div>
         </section>
     </main>
