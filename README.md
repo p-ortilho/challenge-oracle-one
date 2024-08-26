@@ -3,6 +3,8 @@
 ### Descrição do Projeto
 Este projeto faz parte do desafio "Praticando lógica de programação: Challenge Decodificador de Texto", através do programa `Iniciante em Programação T7 - ONE` e consiste em um codificador de texto simples, desenvolvido com HTML, CSS e JavaScript. A aplicação permite ao usuário inserir um texto, que pode ser codificado ou decodificado utilizando um algoritmo de substituição de caracteres. É uma ótima prática para entender manipulação de DOM, eventos de usuário e lógica de programação básica.
 
+Para acessar o projeto no navegador, acesse o `link`: https://p-ortilho.github.io/challenge-oracle-one/
+
 ---
 
 ### Funcionalidades
